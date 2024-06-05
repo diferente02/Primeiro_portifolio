@@ -4,8 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --cor-primaria: black;
-    --cor-secundaria: white;
+    --cor-primaria: white;
+    --cor-secundaria: black;
     --cor-terciaria: #22D4FD;
 
     --fonte-primaria: 'Krona one',sans-serif;
@@ -33,7 +33,7 @@ body {
 .cabecalho__menu__links{
     text-decoration: none;
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--cor-terciaria);
 }
@@ -126,11 +126,13 @@ strong{
 }
 @media (max-width: 1200px){
     .cabecalho{
-        padding: 10%
+        padding: 2%
     }
     .cabecalho__menu{
         justify-content: center;
-        gap: 10px;
+        gap: 5px;
+        flex-wrap: nowrap;
+        text-align: center;
     }
     .apresentacao{
         flex-direction: column-reverse;
@@ -138,5 +140,10 @@ strong{
     }
     .apresentacao__section{
         width: auto;
+    }
+}
+@media(max-width:400px) and (min-width:1200px){
+    .cabecalho__menu__links{
+        font-size:10px;
     }
 }
