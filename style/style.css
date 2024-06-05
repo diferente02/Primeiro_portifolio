@@ -1,0 +1,142 @@
+/* importação da fonte krona one para titulo */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+/* importação da fonte Mont serrat para o paragrafo */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cor-primaria: black;
+    --cor-secundaria: white;
+    --cor-terciaria: #22D4FD;
+
+    --fonte-primaria: 'Krona one',sans-serif;
+    --fonte-secundaria: 'Montserrat','sans-serif';
+
+}
+
+*{
+    margin: 0;
+    padding:0;
+    }
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+.cabecalho{
+    padding: 10% 0 0 10% ;
+}
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__links{
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+}
+strong{
+    color: var(--cor-terciaria);
+}
+.apresentacao{
+    padding: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:82px; 
+}
+.apresentacao__section{
+    width: 615px; /* define a largura da parte com texto*/
+    display: flex;
+    /* espaçamento entre o titulo, texto e botoes */
+    flex-direction: column;
+    gap: 25px;
+}
+.apresentacao__section__titulo{
+    font-family: var(--fonte-primaria); /* Mudando a fonte do H1 para a krona one*/
+    font-size: 2.25rem;
+}
+.apresentacao__section__texto{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+}
+.apresentacao__section__links{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+.apresentacao__section__links__subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__section__links__botao{
+    color: var(--cor-terciaria); /* cor do elemento ( nesse caso o elemento é só o texto) */ 
+    width: 60%;
+    padding: 21.5px 0px; /*distancia até a borda  */
+    border: 2px solid var(--cor-terciaria);
+    text-align: center;
+    border-radius: 8px; /* arredondamento das bordas */
+    text-decoration: none; /* tirando o itálico*/
+    font-family: var(--fonte-secundaria);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.apresentacao__section__links__botao:hover{
+    background-color: var(--cor-secundaria);
+}
+.apresentacao__curriculos{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.apresentacao__curriculos__certificados{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.apresentacao__curriculos__certificados__certificado{
+    width: 40%;
+}
+#img1:hover, #img2:hover, #img3:hover, #img4:hover{
+    width: 70%;
+}
+.apresentacao__imagem{
+    width: 50%;
+    border-radius: 30%;;
+}
+.rodape{
+    padding: 24px;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    text-align: center;
+
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+}
+@media (max-width: 1200px){
+    .cabecalho{
+        padding: 10%
+    }
+    .cabecalho__menu{
+        justify-content: center;
+        gap: 10px;
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao__section{
+        width: auto;
+    }
+}
